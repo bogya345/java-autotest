@@ -1,0 +1,15 @@
+2021-07-22 16:55:07 INFO  SecondTest:24 - Init SecondTest
+2021-07-22 16:55:07 INFO  SecondTest:77 - Creating a file
+2021-07-22 16:55:07 INFO  SecondTest:112 - Poof
+2021-07-22 16:56:04 INFO  SecondTest:24 - Init SecondTest
+2021-07-22 16:56:04 INFO  SecondTest:77 - Creating a file
+2021-07-22 16:56:04 INFO  SecondTest:112 - Poof
+2021-07-22 16:56:56 INFO  BasePages2:21 - Init Basepages2
+2021-07-22 16:56:56 INFO  SecondTest:24 - Init SecondTest
+2021-07-22 16:56:56 INFO  SecondTest:77 - Creating a file
+2021-07-22 16:56:56 INFO  SecondTest:112 - Poof
+2021-07-22 16:59:02 INFO  BasePages2:21 - Init Basepages2
+2021-07-22 16:59:02 INFO  SecondTest:24 - Init SecondTest
+2021-07-22 16:59:02 INFO  SecondTest:77 - Creating a file
+2021-07-22 16:59:02 INFO  BasePages2:147 - Poof - Its a Magic
+2021-07-22 16:59:02 INFO  SecondTest:112 - Poof
