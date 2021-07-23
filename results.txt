@@ -1,11 +1,11 @@
-Purchase #0	Start Price = 35 752,67
-Purchase #1	Start Price = 40 000,05
-Purchase #2	Start Price = 36 321,52
-Purchase #3	Start Price = 9 800,00
-Purchase #4	Start Price = 69 480,00
-Purchase #5	Start Price = 9 195 000,00
-Purchase #6	Start Price = 3 000 000,00
-Purchase #7	Start Price = 100 000,00
-Purchase #8	Start Price = 11 768,00
-Purchase #9	Start Price = 13 638,00
+Purchase #0	Start Price = 10 900,00
+Purchase #1	Start Price = 1 950,00
+Purchase #2	Start Price = 10 210,00
+Purchase #3	Start Price = 30 500,33
+Purchase #4	Start Price = 97 000,00
+Purchase #5	Start Price = 18 000,00
+Purchase #6	Start Price = 7 056,10
+Purchase #7	Start Price = 1 600,00
+Purchase #8	Start Price = 2 780,00
+Purchase #9	Start Price = 11 541,65
 Count of purchases: 10

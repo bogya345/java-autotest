@@ -5,6 +5,8 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -44,39 +46,49 @@ public class FirstTest {
         basicPage.chooseAllRules();
         TimeUnit.SECONDS.sleep(1);
     }
+
     @Then("Choose only {string} in behavior rules")
     public void chooseOnlyInBehaviorRules(String arg0) throws InterruptedException {
-        basicPage.chooseBehaiverRules(new String[] {arg0});
+        basicPage.chooseBehaiverRules(new String[]{arg0});
         TimeUnit.SECONDS.sleep(1);
     }
 
     @Then("Choose in quick settings {string}")
     public void chooseInQuickSettings(String arg0) throws InterruptedException {
-        basicPage.chooseOnQuickSettings(new String[] {arg0});
+        basicPage.chooseOnQuickSettings(new String[]{arg0});
         TimeUnit.SECONDS.sleep(2);
     }
 
     @Then("Set until date on {string}")
-    public void setUntilDateOn(String arg0) throws InterruptedException {
-        if(isDigit(arg0.charAt(0))){
-            basicPage.setUntilDate(arg0);
-        }
-        else{
-            if(arg0 == "сегодня"){basicPage.setUntilDate("20-07-2021");}
+    public void setUntilDateOn(String arg0) throws Exception {
+        if (isDigit(arg0.charAt(0))) {
+            basicPage.setDate(arg0, BasePages.DatepeackerType.SubApps_until);
+        } else {
+            String arg = "";
+            if (arg0.equalsIgnoreCase("сегодня")) {
+                Date now = new Date();
+                SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MM-YYYY");
+                arg = sdfDate.format(now);
+            }
+
+            if (arg == "") {
+                throw new Exception("Unhandled date period argument");
+            }
+            basicPage.setDate(arg, BasePages.DatepeackerType.SubApps_until);
         }
         TimeUnit.SECONDS.sleep(1);
     }
 
     @Then("Choose needed region {string}")
     public void chooseNeededRegion(String arg0) throws InterruptedException {
-        basicPage.chooseRegions(new String[] {arg0});
+        basicPage.chooseRegions(new String[]{arg0});
         TimeUnit.SECONDS.sleep(1);
     }
 
     @Then("Click on search button")
     public void clickOnSearchButton() throws InterruptedException {
         basicPage.clickSearchBtn();
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(1);
     }
 
     @Then("Save the results to a file called {string}")

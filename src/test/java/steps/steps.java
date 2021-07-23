@@ -15,6 +15,7 @@ public class steps {
 //        browser = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe";
 
         open("https://www.rts-tender.ru/");
+        // to-do await while connected
     }
 
 }
