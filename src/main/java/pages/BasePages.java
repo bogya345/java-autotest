@@ -111,6 +111,10 @@ public class BasePages {
 
         List<WebElement> childs = parent_div.findElements(By.xpath("./child::div[contains(@class, 'card')]"));
 
+        while(childs.size() == 0){
+            _logger.info("Empty list is empty. Waiting while they appear");
+        }
+
         List<Double> accum;
         if (childs.size() > 0) {
             accum = new LinkedList<Double>();
@@ -153,20 +157,28 @@ public class BasePages {
                 _logger.info("File created: " + myObj.getName());
             }
             else {
-                _logger.info("File already exists.");
+                _logger.info("File already exists");
             }
 
             FileWriter myWriter = new FileWriter(filename + ".txt");
 
+            _logger.info("==========\tPurchases info start\t==========");
             int index = 0;
             for (Double i : items) {
-                myWriter.write("Purchase #" + index + "\t" + "Start Price = " + String.format("%,.2f", i) .replace(" ", " ") + "\n");
+                String item_message = "Purchase #" + index + "\t" + "Start Price = " + String.format("%,.2f", i) .replace(" ", " ") + "\n";
+                myWriter.write(item_message);
+                _logger.info(item_message);
                 index++;
             }
-            myWriter.write("Count of purchases: " + items.size());
+            String sum_message = "Count of purchases: " + items.size();
+            myWriter.write(sum_message);
+            _logger.info(sum_message);
             myWriter.close();
+            _logger.info("==========\tPurchases info end\t==========");
 
-            _logger.info("Successfully wrote to the file.");
+            _logger.info("Successfully wrote to the file");
+
+            _logger.error("Test error", new Exception("Test exception"));
 
         } catch (IOException e) {
             _logger.info("An error occurred.", e);

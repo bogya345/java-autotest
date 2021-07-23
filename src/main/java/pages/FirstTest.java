@@ -76,7 +76,7 @@ public class FirstTest {
     @Then("Click on search button")
     public void clickOnSearchButton() throws InterruptedException {
         basicPage.clickSearchBtn();
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(2);
     }
 
     @Then("Save the results to a file called {string}")
