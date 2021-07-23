@@ -111,10 +111,6 @@ public class BasePages {
 
         List<WebElement> childs = parent_div.findElements(By.xpath("./child::div[contains(@class, 'card')]"));
 
-        while(childs.size() == 0){
-            _logger.info("Empty list is empty. Waiting while they appear");
-        }
-
         List<Double> accum;
         if (childs.size() > 0) {
             accum = new LinkedList<Double>();
